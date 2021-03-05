@@ -41,6 +41,11 @@ return [
             'provider' => 'users',
         ],
 
+        //guard for merchants
+        'web' => [
+            'driver' => 'session',
+            'provider' => 'merchant',
+        ],
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
@@ -69,6 +74,12 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
+        ],
+
+        //merchant providers
+        'merchant' => [
+            'driver' => 'eloquent',
+            'model' => App\account\merchant::class,
         ],
 
         // 'users' => [

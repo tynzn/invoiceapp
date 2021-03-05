@@ -25,3 +25,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 //Invoice controllers
 
 Route::Resource('invoice','InvoiceController');
+Route::Resource('/merchant','logincontroller' );
